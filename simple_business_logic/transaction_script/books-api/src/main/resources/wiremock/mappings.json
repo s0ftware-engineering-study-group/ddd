@@ -1,0 +1,31 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/books"
+  },
+
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "text/plain"
+    },
+    "jsonBody": {
+      "books": [
+        {
+          "id": 1,
+          "title": "The Lord of the Rings",
+          "author": "J.R.R. Tolkien",
+          "publisher": "George Allen & Unwin",
+          "year": 1954
+        },
+        {
+          "id": 2,
+          "title": "The Hobbit",
+          "author": "J.R.R. Tolkien",
+          "publisher": "George Allen & Unwin",
+          "year": 1937
+        }
+      ]
+    }
+  }
+}

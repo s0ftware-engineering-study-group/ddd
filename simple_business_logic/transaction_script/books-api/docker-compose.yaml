@@ -3,6 +3,12 @@ networks:
     driver: bridge
 
 services:
+  mock-external-api:
+    image: wiremock/wiremock:latest
+    ports:
+      - "3001:8080"
+    volumes:
+      - ./src/main/resources/wiremock:/home/wiremock/mappings
   postgres:
     image: postgres:16-alpine3.19
     environment:
@@ -26,5 +32,6 @@ services:
       DB_PASSWORD: postgres
     depends_on:
       - postgres
+      - mock-external-api
     networks:
       - api-internal
