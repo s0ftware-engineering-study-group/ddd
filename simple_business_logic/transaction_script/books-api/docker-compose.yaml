@@ -9,6 +9,8 @@ services:
       - "3001:8080"
     volumes:
       - ./src/main/resources/wiremock:/home/wiremock/mappings
+    networks:
+      - api-internal
   postgres:
     image: postgres:16-alpine3.19
     environment:

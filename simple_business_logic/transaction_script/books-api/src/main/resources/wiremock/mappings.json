@@ -7,25 +7,24 @@
   "response": {
     "status": 200,
     "headers": {
-      "Content-Type": "text/plain"
+      "Content-Type": "application/json"
     },
-    "jsonBody": {
-      "books": [
+    "jsonBody":
+      [
         {
           "id": 1,
           "title": "The Lord of the Rings",
           "author": "J.R.R. Tolkien",
           "publisher": "George Allen & Unwin",
-          "year": 1954
+          "publishedAt": "29-07-1957"
         },
         {
           "id": 2,
           "title": "The Hobbit",
           "author": "J.R.R. Tolkien",
           "publisher": "George Allen & Unwin",
-          "year": 1937
+          "publishedAt": "21-09-1937"
         }
       ]
-    }
   }
 }

@@ -1,12 +1,7 @@
 package studygroup.ddd.bookapi;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Date;
 
@@ -15,12 +10,19 @@ import java.util.Date;
 @Getter
 @Setter
 @Table(name = "book")
+@Builder
+@AllArgsConstructor
 public class BookEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String authorName;
     private String publisherName;
     private Date publishedAt;
+
+    @Override
+    public String toString() {
+        return "BookEntity[title=%s, author=%s]".formatted(this.title, this.authorName);
+    }
 }
